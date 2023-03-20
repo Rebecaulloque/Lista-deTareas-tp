@@ -1,0 +1,175 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  background-attachment: fixed;
+  color: white;
+
+}
+
+h1 {
+  text-align: center;
+  color: #c060ca;
+}
+
+.container {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 5px 0 rgba(255, 255, 255, 1.5);
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding: 30px;
+
+}
+
+.tareasList {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+form {
+  display: flex;
+}
+
+input {
+  padding: 15px 10px;
+  width: 300px;
+  outline: none;
+}
+
+.btn-add {
+  padding: 5px 15px;
+  color: white;
+  border: none;
+  background-color: #c060ca;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+.btn-add:hover{
+  cursor: pointer;
+  background-color: #a040aa;
+}
+
+.empty {
+  color: #000000;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  background-color: #a770ef;
+  border-radius: 10px;
+  margin-top: 15px;
+  display: flex;
+}
+
+
+li p {
+  margin: 0;
+  padding: 15px;
+  width: 100%;
+}
+
+.btn-delete {
+  margin-left: auto;
+  border: none;
+  background-color: rgb(192, 44, 44);
+  color: beige;
+  padding: 5px 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 10%;
+  font-size: 1.2rem;
+
+}
+
+.btn-delete:hover {
+  background-color: rgb(217, 75, 75);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+
+.btn-complete {
+  margin-left: auto;
+  border: none;
+  background-color: rgb(42, 165, 54);
+  color: beige;
+  padding: 5px 10px;
+  width: 10%;
+  font-size: 1.2rem;
+}
+
+.btn-complete:hover {
+  background-color: rgb(81, 198, 93);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.p-pendiente{
+  color: white;
+}
+
+.p-completada{
+  text-decoration: line-through;
+  color: rgb(79, 5, 82);
+}
+
+
+footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 25px;
+  background-color: #c9a9e7;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.iconos{
+  width: 30px;
+  color: aliceblue;
+  margin: 10px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 645px) {
+  .container{
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+  }
+  .btn-add{
+    font-size: 12px;
+  }
+  .btn-delete{
+    width: 15%;
+  }
+  .btn-complete{
+    width: 15%;
+  }
+
+  footer{
+      font-size: 13px;
+  }
+}
