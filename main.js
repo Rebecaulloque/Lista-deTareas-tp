@@ -13,13 +13,12 @@ addBtn.addEventListener("click", (e) => {
     const p = document.createElement("p");
 
     p.textContent = text;
-    p.className= "p-pendiente";
+    p.className = "p-pendiente";
 
     li.appendChild(p);
     ul.appendChild(li);
     li.appendChild(addCompleteBtn());
     li.appendChild(addDeleteBtn());
-   
 
     input.value = "";
     empty.style.display = "none";
@@ -32,25 +31,24 @@ function addCompleteBtn() {
   completeBtn.textContent = "✓";
   completeBtn.className = "btn-complete";
 
-   completeBtn.addEventListener("click", (e) => {
+  completeBtn.addEventListener("click", (e) => {
+    const item = e.target.parentElement;
+    let itemParrafo =
+      item.getElementsByClassName("p-pendiente").length == 1
+        ? item.getElementsByClassName("p-pendiente")
+        : item.getElementsByClassName("p-completada");
 
-    const p = document.querySelector("p");
 
-    if (p.className == "p-pendiente") {
-      p.className = "p-completada" 
-    } else  {
-      p.className = "p-pendiente"   
+    if (itemParrafo[0].className == "p-pendiente") {
+      itemParrafo[0].className = "p-completada";
+    } else {
+      itemParrafo[0].className = "p-pendiente";
     }
 
-    console.log(p.className)
-
-   });
-
-
+  });
 
   return completeBtn;
 }
-
 
 function addDeleteBtn() {
   const deleteBtn = document.createElement("button");
@@ -72,4 +70,3 @@ function addDeleteBtn() {
 
   return deleteBtn;
 }
-
